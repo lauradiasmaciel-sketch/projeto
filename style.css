@@ -1,7 +1,3 @@
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +11,6 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #263238;
-    background: #ffffff;
     line-height: 1.6;
 }
 
@@ -33,25 +28,23 @@ section {
 }
 
 
-/* =========================
-   NAVBAR
-========================= */
+/* MENU */
 
 header {
     position: fixed;
-    width: 100%;
     top: 0;
-    left: 0;
+    width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.96);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+
+    background: white;
+
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
 }
 
 .navbar {
-    max-width: 1250px;
-    margin: auto;
+    max-width: 1200px;
     height: 75px;
-    padding: 0 20px;
+    margin: auto;
 
     display: flex;
     align-items: center;
@@ -60,7 +53,7 @@ header {
 
 .logo {
     font-size: 27px;
-    font-weight: 800;
+    font-weight: bold;
     color: #176b87;
 }
 
@@ -69,15 +62,14 @@ header {
 }
 
 .menu {
-    list-style: none;
     display: flex;
-    gap: 28px;
+    gap: 25px;
+    list-style: none;
 }
 
 .menu a {
-    color: #37474f;
-    font-weight: 600;
-    transition: 0.3s;
+    color: #263238;
+    font-weight: bold;
 }
 
 .menu a:hover {
@@ -86,16 +78,15 @@ header {
 
 .menu-btn {
     display: none;
-    border: none;
+
     background: none;
+    border: none;
+
     font-size: 28px;
-    cursor: pointer;
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
     min-height: 100vh;
@@ -103,27 +94,25 @@ header {
     display: flex;
     align-items: center;
 
+    color: white;
+
     background:
         linear-gradient(
-            90deg,
-            rgba(12, 61, 77, 0.95),
-            rgba(12, 61, 77, 0.55)
+            rgba(10, 65, 80, 0.85),
+            rgba(10, 65, 80, 0.75)
         ),
-        url("imagens/clinica.jpg");
+        url("https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=1800&q=85");
 
     background-size: cover;
     background-position: center;
-
-    color: white;
-    padding-top: 120px;
 }
 
-.hero-content {
+.hero-text {
     max-width: 700px;
 }
 
-.subtitulo,
-.titulo-pequeno {
+.destaque,
+.titulo {
     color: #4caf7a;
     font-weight: bold;
     letter-spacing: 2px;
@@ -137,117 +126,100 @@ header {
 }
 
 .hero h1 span {
-    color: #67d497;
+    color: #69db99;
 }
 
-.hero p {
+.hero-text > p:not(.destaque) {
     font-size: 20px;
-    max-width: 620px;
 }
 
 .botoes {
     display: flex;
     gap: 15px;
-    margin-top: 35px;
+    margin-top: 30px;
     flex-wrap: wrap;
 }
 
-.botao {
+.botao,
+form button {
     display: inline-block;
+
     padding: 14px 25px;
-    border-radius: 30px;
+
     border: none;
+    border-radius: 30px;
 
     background: #4caf7a;
     color: white;
 
     font-weight: bold;
     cursor: pointer;
-
-    transition: 0.3s;
 }
 
-.botao:hover {
-    background: #398d61;
-    transform: translateY(-3px);
+.botao:hover,
+form button:hover {
+    background: #368d60;
 }
 
-.botao-secundario {
+.botao-branco {
     background: transparent;
     border: 2px solid white;
 }
 
-.botao-secundario:hover {
-    background: white;
-    color: #176b87;
-}
 
-
-/* =========================
-   SOBRE
-========================= */
+/* SOBRE */
 
 .sobre {
-    max-width: 1250px;
+    max-width: 1200px;
     margin: auto;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
+    gap: 60px;
     align-items: center;
 }
 
-.imagem-sobre img {
+.imagem img {
     height: 500px;
     object-fit: cover;
-    border-radius: 30px;
-    box-shadow: 20px 20px 0 #dff4e9;
+    border-radius: 25px;
 }
 
-.texto-sobre h2,
+.texto h2,
 .video-text h2,
-.cabecalho-secao h2,
+.cabecalho h2,
 .cuidados h2,
 .contato h2 {
-    font-size: 42px;
-    line-height: 1.15;
-    margin-bottom: 25px;
     color: #16495a;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 25px;
 }
 
-.texto-sobre p {
-    margin-bottom: 18px;
-    color: #5d6b70;
-}
-
-.link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #26935d;
-    font-weight: bold;
+.texto p {
+    margin-bottom: 15px;
+    color: #607078;
 }
 
 
-/* =========================
-   SERVIÇOS
-========================= */
+/* SERVIÇOS */
 
 .servicos {
     background: #f1faf5;
 }
 
-.cabecalho-secao {
+.cabecalho {
     max-width: 750px;
     margin: 0 auto 50px;
     text-align: center;
 }
 
-.cabecalho-secao p:last-child {
-    color: #64757b;
+.cabecalho > p:last-child {
+    color: #607078;
 }
 
 .cards {
-    max-width: 1250px;
+    max-width: 1200px;
     margin: auto;
 
     display: grid;
@@ -257,22 +229,22 @@ header {
 
 .card {
     background: white;
-    padding: 35px;
+    padding: 30px;
+
     border-radius: 20px;
 
-    box-shadow: 0 10px 35px rgba(25, 80, 90, 0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 
     transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 45px rgba(25, 80, 90, 0.15);
 }
 
 .icone {
-    font-size: 45px;
-    margin-bottom: 15px;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
 .card h3 {
@@ -282,16 +254,14 @@ header {
 }
 
 .card p {
-    color: #65767b;
+    color: #68777c;
 }
 
 
-/* =========================
-   VÍDEO
-========================= */
+/* VÍDEO */
 
 .video-section {
-    max-width: 1250px;
+    max-width: 1200px;
     margin: auto;
 
     display: grid;
@@ -300,49 +270,56 @@ header {
     align-items: center;
 }
 
-.video-container {
-    overflow: hidden;
-    border-radius: 25px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+.video-text p:not(.titulo) {
+    color: #607078;
+    margin-bottom: 15px;
 }
 
-.video-container video {
+.video {
     width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.video iframe {
+    width: 100%;
+    height: 400px;
     display: block;
-}
-
-.video-text p {
-    color: #65767b;
+    border: none;
 }
 
 
-/* =========================
-   GALERIA
-========================= */
+/* GALERIA */
 
-.estrutura {
+.galeria-section {
     background: #f7fbf9;
 }
 
 .galeria {
-    max-width: 1250px;
+    max-width: 1200px;
     margin: auto;
 
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 250px 250px;
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .foto {
+    height: 350px;
+
     position: relative;
     overflow: hidden;
+
     border-radius: 20px;
 }
 
 .foto img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
+
     transition: 0.5s;
 }
 
@@ -350,132 +327,140 @@ header {
     transform: scale(1.08);
 }
 
-.foto.grande {
-    grid-row: span 2;
-}
-
 .legenda {
     position: absolute;
+
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
 
-    padding: 25px;
+    padding: 30px 20px 20px;
 
     color: white;
 
     background: linear-gradient(
         transparent,
-        rgba(0, 0, 0, 0.8)
+        rgba(0,0,0,0.85)
     );
 }
 
-.legenda h3 {
-    margin-bottom: 5px;
-}
 
-
-/* =========================
-   CUIDADOS
-========================= */
+/* CUIDADOS */
 
 .cuidados {
-    max-width: 1250px;
+    max-width: 1200px;
     margin: auto;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
+
+    gap: 60px;
     align-items: center;
 }
 
-.cuidados-conteudo p {
-    color: #637278;
-    margin-bottom: 20px;
+.cuidados > div:first-child > p:not(.titulo) {
+    color: #607078;
 }
 
-.lista-cuidados {
+.lista {
+    margin-top: 25px;
+
     display: grid;
-    gap: 12px;
+    gap: 10px;
 }
 
-.lista-cuidados div {
+.lista p {
+    padding: 12px 15px;
+
     background: #f1faf5;
-    padding: 13px 18px;
+
     border-radius: 10px;
-    font-weight: 600;
+
+    font-weight: bold;
 }
 
-.lista-cuidados span {
-    color: #39a86b;
-    margin-right: 10px;
+.lista p::first-letter {
+    color: #4caf7a;
 }
 
 .imagem-cuidados img {
     height: 500px;
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: 25px;
 }
 
 
-/* =========================
-   NÚMEROS
-========================= */
+/* CONSCIENTIZAÇÃO */
 
-.numeros {
-    padding: 60px 8%;
+.conscientizacao {
+    text-align: center;
 
-    background: #176b87;
     color: white;
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-
-    text-align: center;
+    background:
+        linear-gradient(
+            135deg,
+            #145b70,
+            #183d49
+        );
 }
 
-.numeros div {
-    display: flex;
-    flex-direction: column;
+.patas {
+    font-size: 35px;
+    margin-bottom: 20px;
 }
 
-.numeros strong {
+.conscientizacao h2 {
+    max-width: 850px;
+    margin: auto;
+
     font-size: 40px;
-    color: #6ce09c;
+    line-height: 1.2;
 }
 
-.numeros span {
-    opacity: 0.9;
+.conscientizacao p {
+    max-width: 750px;
+    margin: 25px auto;
+
+    font-size: 18px;
+}
+
+.coracao {
+    font-size: 35px;
 }
 
 
-/* =========================
-   CONTATO
-========================= */
+/* CONTATO */
 
 .contato {
-    max-width: 1250px;
+    max-width: 1200px;
     margin: auto;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+
+    gap: 70px;
     align-items: center;
 }
 
+.contato > div > p:not(.titulo) {
+    color: #607078;
+}
+
 .informacoes {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .informacoes p {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 form {
-    background: #f1faf5;
     padding: 35px;
-    border-radius: 25px;
+
+    background: #f1faf5;
+
+    border-radius: 20px;
 }
 
 form h3 {
@@ -484,23 +469,22 @@ form h3 {
     margin-bottom: 20px;
 }
 
-form input,
-form textarea {
+input,
+textarea {
     width: 100%;
+
     padding: 15px;
 
     margin-bottom: 15px;
 
-    border: 1px solid #d5e2dc;
+    border: 1px solid #d4e0db;
     border-radius: 10px;
 
-    font-family: inherit;
-    outline: none;
+    font-family: Arial;
 }
 
-form input:focus,
-form textarea:focus {
-    border-color: #4caf7a;
+textarea {
+    resize: vertical;
 }
 
 form button {
@@ -508,124 +492,59 @@ form button {
 }
 
 
-/* =========================
-   CONSCIENTIZAÇÃO
-========================= */
-
-.conscientizacao {
-    text-align: center;
-    background:
-        linear-gradient(
-            135deg,
-            #145b70,
-            #183d49
-        );
-
-    color: white;
-}
-
-.patinhas {
-    font-size: 35px;
-    margin-bottom: 20px;
-}
-
-.conscientizacao h2 {
-    max-width: 900px;
-    margin: auto;
-
-    font-size: 42px;
-    line-height: 1.2;
-}
-
-.conscientizacao p {
-    max-width: 750px;
-    margin: 25px auto 0;
-
-    font-size: 18px;
-    opacity: 0.9;
-}
-
-.coracao {
-    font-size: 35px;
-    margin-top: 25px;
-}
-
-
-/* =========================
-   RODAPÉ
-========================= */
+/* RODAPÉ */
 
 footer {
-    background: #102e38;
-    color: white;
-
-    padding: 45px 8%;
+    padding: 40px 8%;
 
     text-align: center;
-}
 
-footer .logo {
-    margin-bottom: 10px;
+    color: white;
+
+    background: #102e38;
 }
 
 footer p {
-    color: #b8c7cb;
+    color: #bdcdd1;
 }
 
 .copyright {
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 14px;
 }
 
 
-/* =========================
-   ANIMAÇÃO
-========================= */
-
-.card,
-.foto,
-.sobre,
-.video-section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 0.7s ease;
-}
-
-.aparecer {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* =========================
-   RESPONSIVIDADE
-========================= */
+/* RESPONSIVO */
 
 @media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
 
     .menu {
         display: none;
 
         position: absolute;
+
         top: 75px;
         left: 0;
 
         width: 100%;
 
+        padding: 25px;
+
         background: white;
 
         flex-direction: column;
-        padding: 25px;
-
-        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
     }
 
     .menu.ativo {
         display: flex;
-    }
-
-    .menu-btn {
-        display: block;
     }
 
     .sobre,
@@ -639,20 +558,6 @@ footer p {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .galeria {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 300px 300px;
-    }
-
-    .foto.grande {
-        grid-column: span 2;
-        grid-row: span 1;
-    }
-
-    .numeros {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
 }
 
 
@@ -662,56 +567,31 @@ footer p {
         padding: 65px 6%;
     }
 
-    .hero {
-        min-height: 90vh;
-    }
-
     .hero h1 {
         font-size: 45px;
     }
 
-    .hero p {
-        font-size: 17px;
-    }
-
-    .texto-sobre h2,
-    .video-text h2,
-    .cabecalho-secao h2,
-    .cuidados h2,
-    .contato h2,
-    .conscientizacao h2 {
-        font-size: 32px;
-    }
-
-    .cards {
+    .cards,
+    .galeria {
         grid-template-columns: 1fr;
     }
 
-    .galeria {
-        display: flex;
-        flex-direction: column;
+    .video iframe {
+        height: 250px;
     }
 
-    .foto {
-        height: 280px;
-    }
-
-    .numeros {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .numeros strong {
-        font-size: 30px;
-    }
-
-    .imagem-sobre img,
+    .imagem img,
     .imagem-cuidados img {
         height: 350px;
     }
 
-    .botoes {
-        flex-direction: column;
-        align-items: flex-start;
+    .texto h2,
+    .video-text h2,
+    .cabecalho h2,
+    .cuidados h2,
+    .contato h2,
+    .conscientizacao h2 {
+        font-size: 31px;
     }
 
 }
