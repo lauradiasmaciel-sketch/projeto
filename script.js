@@ -1,7 +1,3 @@
-// ==============================
-// MENU MOBILE
-// ==============================
-
 function abrirMenu() {
 
     const menu = document.querySelector(".menu");
@@ -11,13 +7,7 @@ function abrirMenu() {
 }
 
 
-// ==============================
-// FECHAR MENU AO CLICAR
-// ==============================
-
-const links = document.querySelectorAll(".menu a");
-
-links.forEach(function(link) {
+document.querySelectorAll(".menu a").forEach(function(link) {
 
     link.addEventListener("click", function() {
 
@@ -28,61 +18,12 @@ links.forEach(function(link) {
 });
 
 
-// ==============================
-// ANIMAÇÃO AO ROLAR A PÁGINA
-// ==============================
-
-const elementos = document.querySelectorAll(
-    ".card, .foto, .sobre, .video-section"
-);
-
-
-function verificarAnimacao() {
-
-    const alturaTela = window.innerHeight;
-
-    elementos.forEach(function(elemento) {
-
-        const distanciaTopo =
-            elemento.getBoundingClientRect().top;
-
-        if (distanciaTopo < alturaTela - 100) {
-
-            elemento.classList.add("aparecer");
-
-        }
-
-    });
-
-}
-
-
-window.addEventListener("scroll", verificarAnimacao);
-
-verificarAnimacao();
-
-
-// ==============================
-// FORMULÁRIO
-// ==============================
-
-const formulario =
-    document.getElementById("formulario");
-
-
-formulario.addEventListener("submit", function(event) {
+document.getElementById("formulario").addEventListener("submit", function(event) {
 
     event.preventDefault();
 
-    const nome =
-        document.getElementById("nome").value;
+    alert("Mensagem enviada com sucesso! Obrigado pelo contato.");
 
-    alert(
-        "Obrigado, " +
-        nome +
-        "! Sua mensagem foi recebida."
-    );
-
-    formulario.reset();
+    this.reset();
 
 });
